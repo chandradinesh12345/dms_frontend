@@ -1,0 +1,122 @@
+.thankyou-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #000000, #b10510);
+    padding: 20px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.thankyou-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 45px 40px;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+    animation: slideUp 0.7s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.checkmark {
+    width: 70px;
+    height: 70px;
+        background: #07e3ff;
+    color: #000000;
+    font-size: 38px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 0 0 8px rgba(0, 230, 118, 0.3);
+}
+
+.thankyou-card h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.thankyou-card p {
+    font-size: 15.5px;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+.info-box {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 22px 0;
+    text-align: left;
+}
+
+.info-box span {
+    font-size: 24px;
+}
+
+.action-btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 35px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: #fff;
+    color: #0b3c5d;
+}
+
+.btn.primary:hover {
+        background: #a7050f;
+    color: white;
+}
+
+.btn.outline {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn.outline:hover {
+    background: #fff;
+    color: #0b3c5d;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .thankyou-card {
+        padding: 35px 25px;
+    }
+
+    .thankyou-card h1 {
+        font-size: 26px;
+    }
+}

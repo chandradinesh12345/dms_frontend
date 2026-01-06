@@ -1,0 +1,355 @@
+/* Container Styles */
+.form-container {
+  min-height: 100vh;
+  background-image: url(./Image/car_bg_form.jpg);
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 1;
+  background-size: cover;
+    background-repeat: no-repeat;
+}
+.form-container::before {
+  content: "";
+      background: linear-gradient(to bottom right, #000000a6, #00000078);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  
+}
+.form-wrapper {
+  max-width: 64rem;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+      border-radius: 1rem;
+    overflow: hidden;
+}
+.form-wrapper::before {
+  content: '';
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./Image/AutozCrave.png);
+    z-index: -1;
+    background-size: 52%;
+    opacity: .2;
+
+}
+.form-card {
+  background: #ffffffe8;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+/* Header Styles */
+.form-header {
+      background: linear-gradient(to right, #000000, #b10510);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+.logo-image {
+  width: 80px;
+}
+.form-header h1 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.form-header p {
+  color: #bfdbfe;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+/* Form Body */
+.form-body {
+  padding: 2rem;
+}
+
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.form-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #b10510;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.form-grid-full {
+  grid-column: 1 / -1;
+}
+
+/* Form Fields */
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.form-input,
+.form-select {
+  padding: 0.7rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.form-input.error,
+.form-select.error {
+  border-color: #ef4444;
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Error Message */
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* File Upload */
+.file-upload-wrapper {
+  position: relative;
+}
+
+.file-upload-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.file-upload-input.error {
+  border-color: #ef4444;
+}
+
+.file-upload-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.upload-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.625rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.file-success {
+  color: #16a34a;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Submit Button */
+.submit-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+.step-btn-wrapper.current_btn {
+    justify-content: end;
+}
+.submit-button {
+  background: linear-gradient(to right, #111111, #b1050f);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 35px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submit-button:hover {
+  background: linear-gradient(to right, #b1050f, #000000);
+  transform: scale(1.05);
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+/* Select Dropdown */
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+.step-btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.step-indicator {
+  display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 50%;
+    margin: 0 auto 40px;
+    z-index: 1;
+}
+.step-indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #e0e0e0;
+  z-index: -1;
+}
+
+.progress-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  background: #b10510;
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+
+.step {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.step.active {
+  background: #6b6868;
+  color: #fff;
+}
+
+.step.completed {
+  background: #b10510;
+  color: #fff;
+}
+
+.btn.next {
+  background: #b1050f;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 35px 20px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.btn.prev {
+  background: #d1d5db;
+  color: #000;
+  padding: 12px 24px;
+      border-radius: 35px 20px;
+    border: none;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .form-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .form-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .form-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-body {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+}
