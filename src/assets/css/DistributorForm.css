@@ -1,7 +1,7 @@
 /* Container Styles */
 .form-container {
   min-height: 100vh;
-  background-image: url(./Image/car_bg_form.jpg);
+  background-image: url(../../assets/images/car_bg_form.jpg);
   padding: 2rem 1rem;
   position: relative;
   z-index: 1;
@@ -48,7 +48,7 @@
 
 /* Header Styles */
 .form-header {
-      background: linear-gradient(to right, #000000, #b10510);
+      background: #b4101a;
     padding: 15px;
     display: flex;
     align-items: center;

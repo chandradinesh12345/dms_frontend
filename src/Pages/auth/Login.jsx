@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { User, Lock } from "lucide-react";
+import { User, Lock, Eye, EyeOff } from "lucide-react";
 import "../../assets/css/login.css";
 import { Link, useNavigate } from "react-router-dom";
 import api from "../../services/api";
+import logo from "../../assets/images/AutozCrave.png";
 import { toast } from "react-toastify";
 
 export const Login = () => {
@@ -74,14 +75,17 @@ export const Login = () => {
     }
   };
 
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
+
     <div className="login-container">
       <div className="login-wrapper">
         <div className="login-card">
           <div className="login-header">
             <div className="header-logo">
               <img
-                src="/Image/AutozCrave.png"
+                src={logo}
                 alt="Company Logo"
                 className="logo-image"
               />
@@ -105,7 +109,7 @@ export const Login = () => {
                     User Id <span className="required">*</span>
                   </label>
                   <input
-                    type="text"
+                    type="password"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
@@ -122,13 +126,21 @@ export const Login = () => {
                     Password <span className="required">*</span>
                   </label>
                   <input
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     name="password"
                     value={formData.password}
                     onChange={handleInputChange}
                     placeholder="Enter your password"
                     className={`form-input ${errors.password ? "error" : ""}`}
                   />
+                  {/* EYE ICON */}
+                  <span
+                    className="eye-icon"
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                  </span>
+
                   {errors.password && (
                     <span className="error-message">{errors.password}</span>
                   )}

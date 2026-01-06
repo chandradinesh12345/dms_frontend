@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Upload, User, Building2, MapPin, FileText } from "lucide-react";
 import "../../assets/css/DistributorForm.css";
 import { ArrowRight, Send } from "lucide-react";
+import logo from "../../assets/images/AutozCrave.png";
 import { Link } from "react-router-dom";
 import api from "../../services/api";
 import { useNavigate } from "react-router-dom";
@@ -276,7 +277,7 @@ export default function DistributorForm() {
           <div className="form-header">
             <div className="header-logo">
               <img
-                src="/Image/AutozCrave.png"
+                src={logo}
                 alt="Company Logo"
                 className="logo-image"
               />
@@ -317,7 +318,7 @@ export default function DistributorForm() {
                   <h2 className="section-title">Basic Information</h2>
                 </div>
 
-                <div className="form-grid">
+                <div className="form-grid phone_view_grid">
                   <div className="form-field">
                     <label className="form-label">
                       Distributor Name <span className="required">*</span>
@@ -455,7 +456,7 @@ export default function DistributorForm() {
                   <h2 className="section-title">Business Details</h2>
                 </div>
 
-                <div className="form-grid">
+                <div className="form-grid phone_view_grid">
                   <div className="form-field">
                     <label className="form-label">
                       Business Type <span className="required">*</span>
@@ -563,7 +564,7 @@ export default function DistributorForm() {
                   <h2 className="section-title">Address Details</h2>
                 </div>
 
-                <div className="form-grid">
+                <div className="form-grid phone_view_grid">
                   <div className="form-field form-grid-full">
                     <label className="form-label">
                       Address Line 1 <span className="required">*</span>
@@ -683,7 +684,7 @@ export default function DistributorForm() {
                   </h2>
                 </div>
 
-                <div className="form-grid">
+                <div className="form-grid phone_view_grid">
                   <div className="form-field">
                     <label className="form-label">
                       GST Number <span className="required">*</span>
